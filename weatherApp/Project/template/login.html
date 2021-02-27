@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+
+<form method="POST" class="row g-3">
+    <div class="col-md-6">
+        {{form.hidden_tag()}}
+        <div>
+            {{form.email.label(class="form-label")}}{{form.email(class="form-control")}}
+        </div>
+        <div>
+            {{form.password.label(class="form-label")}}{{form.password(class="form-control")}}
+        </div>
+        <br>
+        <div>
+            {{form.submit(class="btn btn-outline-success")}}
+        </div>
+    </div>
+</form>
+
+{% endblock %}

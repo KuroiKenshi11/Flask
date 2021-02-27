@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+
+<div>
+    <h1>My website</h1>
+</div>
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <form class="d-flex" method="POST">
+            {{form.search.label(placeholder="Search")}}{{form.search(class="form-control")}} {{form.submit(class="btn btn-outline-success")}}
+        </form>
+    </div>
+</nav>
+
+<br>
+
+<div>
+    {% if city == "None" %}
+    <h2>City name: ...</h2>
+    <p>Temperature: ...</p>
+    {%else%}
+    <h2>City name:{{city}}</h2>
+    <p>Temperature: {{temp}} C°</p>
+    {% endif %}
+</div>
+</div>
+{% endblock %}
