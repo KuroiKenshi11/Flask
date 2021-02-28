@@ -18,8 +18,8 @@ Migrate(app, db)
 
 @app.before_first_request
 def create_table():
-    from .model import User
-    db.create_all()
+    from Project.model import User
+    return db.create_all()
 
 
 login_manager = LoginManager()

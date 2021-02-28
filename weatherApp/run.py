@@ -88,5 +88,11 @@ def handle_error_400(e):
     return render_template("errors/400.html"), 400
 
 
+@app.before_first_request
+def create_table():
+    return db.create_all()
+
+
 if __name__ == "__main__":
+    create_table()
     app.run(debug=True)
