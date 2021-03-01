@@ -1,20 +1,49 @@
 {% extends "base.html" %} {% block content %}
+<main class="log-in-content">
+    <div class="col-md-6 contents">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="form-block">
+                    <div class="mb-4">
+                        <h3>Log In to <strong>Weather searcher</strong></h3>
+                        <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
+                    </div>
+                    <form method="POST">
+                        <div class="form-group first">
+                            {{form.hidden_tag()}} {{form.email.label}}{{form.email(class="form-control", id="username")}}
+                        </div>
+                        <div class="form-group last mb-4">
+                            {{form.password.label}}{{form.password(class="form-control", id="password")}}
+                        </div>
 
+                        <div class="d-flex mb-5 align-items-center">
+                            <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label>
+                            <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                        </div>
+                        {{form.submit(class="btn btn-pill text-white btn-block btn-primary")}}
 
-<form method="POST" class="row g-3">
-    <div class="col-md-6">
-        {{form.hidden_tag()}}
-        <div>
-            {{form.email.label(class="form-label")}}{{form.email(class="form-control")}}
+                        <span class="d-block text-center my-4 text-muted"> or sign in with</span>
+
+                        <div class="social-login text-center">
+                            <a href="#" class="facebook">
+                                <span class="icon-facebook mr-3"></span>
+                            </a>
+                            <a href="#" class="twitter">
+                                <span class="icon-twitter mr-3"></span>
+                            </a>
+                            <a href="#" class="google">
+                                <span class="icon-google mr-3"></span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div>
-            {{form.password.label(class="form-label")}}{{form.password(class="form-control")}}
-        </div>
-        <br>
-        <div>
-            {{form.submit(class="btn btn-outline-success")}}
-        </div>
+
     </div>
-</form>
+</main>
 
 {% endblock %}

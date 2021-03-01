@@ -1,6 +1,8 @@
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 300px;
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
 }
 
 

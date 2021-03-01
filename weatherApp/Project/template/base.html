@@ -7,8 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <title>Document</title>
+
+    <link rel="stylesheet" href="static/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        main {
+            padding-bottom: 300px;
+            margin: 0 auto;
+            position: relative;
+            width: 960px;
+        }
+        
+        .register-content {
+            padding-bottom: 300px;
+            padding-left: 360px;
+            margin: 0 auto;
+            position: relative;
+            width: 1800px;
+        }
+        
+        .log-in-content {
+            padding-bottom: 300px;
+            padding-left: 360px;
+            margin: 0 auto;
+            position: relative;
+            width: 1800px;
+        }
+    </style>
+    <title>weather - {{title}}</title>
 </head>
 
 <body>
@@ -23,8 +59,12 @@
         <a href="{{url_for('login')}}">Login</a>
         <a href="{{url_for('register')}}">Register</a> {% endif %}
     </div>
-    {% block content %} {% endblock %}
-    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/main.js"></script>
+    {% block content %}{% endblock %}
+
 </body>
 
 </html>

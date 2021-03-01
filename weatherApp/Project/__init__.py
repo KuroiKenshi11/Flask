@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 
 
-app = Flask(__name__, template_folder="template")
+app = Flask(__name__, template_folder="template", static_folder="static")
 app.config["SECRET_KEY"] = "otakuanime"
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + \

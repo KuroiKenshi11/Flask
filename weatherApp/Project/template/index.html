@@ -1,33 +1,34 @@
 {% extends "base.html" %} {% block content %}
 
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">My website</h1>
-    </div>
-
-    <nav class="navbar navbar-light bg-light container">
-        <div class="container-fluid">
-            <form class="d-flex" method="POST">
-                {{form.search.label(placeholder="Search")}}{{form.search(class="form-control")}} {{form.submit(class="btn btn-outline-success")}}
-            </form>
+<main>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Weather Search</h1>
         </div>
-    </nav>
 
-    <br>
+        <nav class="navbar navbar-light bg-light container">
+            <div class="container-fluid container">
+                <form class="d-flex" method="POST">
+                    {{form.search.label}}{{form.search(class="form-control")}} {{form.submit(class="btn btn-outline-success")}}
+                </form>
+            </div>
+        </nav>
 
-    <div class="container">
-        {% if name == "None" %}
-        <h3>City name:...</h3>
-        <p class="lead">Temperature: ...</p>
-        <p class="lead">Lowest temperature: ...</p>
-        <p class="lead">Highest temperature: ...</p>
-        {%else%}
-        <h3>City name:{{name}}</h3>
-        <p class="lead">Temperature: {{temp}} C°</p>
-        <p class="lead">Lowest temperature: {{min_temp}} C°</p>
-        <p class="lead">Highest temperature: {{max_temp}} C°</p>
-        {% endif %}
+        <br>
+
+        <div class="container">
+            {% if name == "None" %}
+            <h3>City name:...</h3>
+            <p class="mb-4"><strong>Temperature: ...</strong></p>
+            <p class="mb-4"><strong>Lowest temperature: ...</strong></p>
+            <p class="mb-4"><strong>Highest temperature: ...</strong></p>
+            {%else%}
+            <h3>City name:{{name}}</h3>
+            <p class="mb-4"><strong>Temperature: {{temp}} C°</strong></p>
+            <p class="mb-4"><strong>Lowest temperature: {{min_temp}} C°</strong></p>
+            <p class="mb-4"><strong>Highest temperature: {{max_temp}} C°</strong></p>
+            {% endif %}
+        </div>
     </div>
-</div>
+</main>
 {% endblock %}
