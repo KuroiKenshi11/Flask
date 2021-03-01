@@ -15,6 +15,8 @@ from werkzeug.exceptions import BadRequest
 def index():
     if current_user.is_authenticated:
         try:
+            if request.get.args == "/login" or request.get.args == "/register":
+                return redirect(url_for("index"))
             form = TempretureSearch()
             search = str(form.search.data).strip()
             weather = weather_data.get_weatherData(
